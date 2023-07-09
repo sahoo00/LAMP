@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": -246.39, "left": -77.69, "attrs": {} },
+    {
+      "type": "wokwi-ssd1306",
+      "id": "oled1",
+      "top": -148.87,
+      "left": -140.87,
+      "attrs": { "i2c-address": "0x3C" }
+    },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": -135.99, "left": 19.12, "attrs": {} }
+  ],
+  "connections": [
+    [ "nano:A4", "oled1:DATA", "green", [ "v13.3", "h-36.57" ] ],
+    [ "nano:A5", "oled1:CLK", "green", [ "v19.97", "h-32.83" ] ],
+    [ "nano:5V", "oled1:VIN", "red", [ "v25.97", "h-28.3" ] ],
+    [ "nano:GND.1", "oled1:GND", "black", [ "v31.97", "h-22.83" ] ],
+    [ "encoder1:GND", "nano:GND.2", "black", [ "h33.77", "v-55.86", "h149.82" ] ],
+    [ "encoder1:VCC", "nano:5V", "red", [ "h20.73", "v55.7", "h-1.32" ] ],
+    [ "encoder1:SW", "nano:2", "green", [ "h46.93", "v-28.88", "h122.73" ] ],
+    [ "encoder1:DT", "nano:3", "green", [ "h18.63", "v-51.32", "h127.23" ] ],
+    [ "encoder1:CLK", "nano:4", "green", [ "h9.47", "v-61.04", "h139.13" ] ]
+  ]
+}
