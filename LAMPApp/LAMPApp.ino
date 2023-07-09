@@ -1,4 +1,4 @@
-#include "ShanviLogo.h"
+#include "Logo.h"
 //#include "SChart.h"
 
 #include <SPI.h>
